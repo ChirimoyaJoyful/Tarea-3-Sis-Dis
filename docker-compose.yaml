@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  node:
+    container_name: node
+    build: .
+    ports:
+      - "3000:3000"
+  cassandra1:
+    container_name: cassandra1
+    image: cassandra:4.0.4
+    environment:
+      - 
+  cassandra2:
+    container_name: cassandra2
+    image: cassandra:4.0.4
+    environment:
+      - 
+  cassandra3:
+    container_name: cassandra3
+    image: cassandra:4.0.4
+    environment:
+      - 
