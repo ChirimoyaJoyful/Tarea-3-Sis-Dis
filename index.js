@@ -1,5 +1,5 @@
 const express = require('express');
-const casandra = require('cassandra-driver');
+const cassandra = require('cassandra-driver');
 
 const app = express();
 const port = 3000;
@@ -11,7 +11,7 @@ const contactPoints = ['127.0.0.1'];
 const client = new cassandra.Client({
     contactPoints: [contactPoints],
     localDataCenter: 'datacenter1',
-    keyspace: 'ks1'
+    keyspace: 'db'
 });
 
 
