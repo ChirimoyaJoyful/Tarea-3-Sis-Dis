@@ -9,7 +9,7 @@ CREATE KEYSPACE "recetas"
         'replication_factor': 3
     };
 
-CREATE TABLE "paciente" (
+CREATE TABLE pacientes.paciente (
     "id" int,
     "nombre" text,
     "apellido" text,
@@ -19,7 +19,7 @@ CREATE TABLE "paciente" (
     PRIMARY KEY ("id")
 ); 
 
-CREATE TABLE "receta" (
+CREATE TABLE recetas.receta (
     "id" int,
     "id_paciente" int,
     "comentario" text,
