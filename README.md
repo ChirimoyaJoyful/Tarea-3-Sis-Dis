@@ -13,11 +13,11 @@ Integrantes:
 
 # Instrucciones de uso
 
-- Para el ingreso de receta se debe ingresar a la url ```localhost:3000/create?id_p={}&nombre={}&apellido={}&rut={}&email={}&fn={}&comentario={}&farmacos={}&doctor={}&id_f={}```
-- Para la edición de una receta se ingresa a ```localhost:3000/edit?id_f={}&comentario={}&farmacos={}&doctor={}```
-- Para eliminar una receta se ingresa a la url ```localhost:3000/delete?id_f={}```
+- Para el ingreso de receta se usa la url ```localhost:3000/create?id_p={}&nombre={}&apellido={}&rut={}&email={}&fn={}&comentario={}&farmacos={}&doctor={}&id_f={}```
+- Para la edición de una receta se usa ```localhost:3000/edit?id_f={}&comentario={}&farmacos={}&doctor={}```
+- Para eliminar una receta se usa la url ```localhost:3000/delete?id_f={}```
 - En todos los pasos '{}' debe ser reemplazado por los valores deseados.
-- Todos los pasos anteriores pueden ser efectuados en Postman en su lugar.
+- Todos los pasos anteriores deben ser efectuados en Postman para su funcionamiento.
 
 # Preguntas
 
