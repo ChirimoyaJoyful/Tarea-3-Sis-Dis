@@ -6,19 +6,19 @@ const port = 3000;
 
 app.use(express.json());
 
-const contactPoints = ['cassandra1'];
+const contactPoints = ['172.25.0.4'];
 
 const client = new cassandra.Client({
     contactPoints: [contactPoints],
     localDataCenter: 'datacenter1',
-    keyspace: 'tarea3'
+    keyspace: 'tarea3',
+    credentials: {username: 'cassandra', password: 'cassandra' }
 });
 
 
 app.post('/create', async (req, res) =>{
     const query = 'INSERT INTO tarea3.paciente (id, nombre, apellido, email, fecha_nacimiento) VALUES (?,?,?,?,?)';
-    
-    await client.execute(query,[req.query.id, req.query.nombre, req.query.apellido, req.query.email, req.query.fn])
+    await client.execute(query,[req.query.id, req.query.nombre, req.query.apellido, req.query.email, req.query.fn], {prepare: true})
         .then(result => console.log("chupa la corneturri"));
 
 });

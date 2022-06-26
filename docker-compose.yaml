@@ -13,7 +13,7 @@ services:
       - cluster
   cassandra1:
     container_name: cassandra1
-    image: bitnami/cassandra:4.0.4
+    image: bitnami/cassandra:3.11.13-debian-10-r14
     environment:
       - CASSANDRA_CLUSTER_NAME=cassandra-cluster
       - CASSANDRA_SEEDS=cassandra1,cassandra2
@@ -22,7 +22,15 @@ services:
       - cluster
   cassandra2:
     container_name: cassandra2
-    image: bitnami/cassandra:4.0.4
+    image: bitnami/cassandra:3.11.13-debian-10-r14
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_SEEDS=cassandra1,cassandra2
+    networks:
+      - cluster
+  cassandra3:
+    container_name: cassandra3
+    image: bitnami/cassandra:3.11.13-debian-10-r14
     environment:
       - CASSANDRA_CLUSTER_NAME=cassandra-cluster
       - CASSANDRA_SEEDS=cassandra1,cassandra2
