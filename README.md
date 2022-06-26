@@ -3,13 +3,21 @@ Integrantes:
 - Joaquín Lagos
 - Lucas Muñoz
 
-# Instrucciones de uso
+# Setup
 
 - Para inicializar el proyecto se debe usar el comando ```docker compose -f "docker-compose.yaml" up -d --build```
 - Con los contenedores levantados se debe buscar la direccion ip del contenedor cassandra1 y colocarla en "index.js" en la constante ```contactPoints```
 - Luego volver a levantar el contenedor de node con el comando ```docker compose  -f "docker-compose.yaml" up -d --build node```
 - Luego se tiene que entrar a la consola de cassandra con el comando ```cqlsh -u cassandra -p cassandra```
-- Finalmente se crear los keyspaces y las tablas tal como se encuetra en el archivo a.cql
+- Finalmente se crean los keyspaces y las tablas tal como se encuetra en el archivo a.cql
+
+# Instrucciones de uso
+
+- Para el ingreso de receta se debe ingresar a la url ```localhost:3000/create?id_p={}&nombre={}&apellido={}&rut={}&email={}&fn={}&comentario={}&farmacos={}&doctor={}&id_f={}```
+- Para la edición de una receta se ingresa a ```localhost:3000/edit?id_f={}&comentario={}&farmacos={}&doctor={}```
+- Para eliminar una receta se ingresa a la url ```localhost:3000/delete?id_f={}```
+- En todos los pasos '{}' debe ser reemplazado por los valores deseados.
+- Todos los pasos anteriores pueden ser efectuados en Postman en su lugar.
 
 # Preguntas
 
