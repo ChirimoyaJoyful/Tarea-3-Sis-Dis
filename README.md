@@ -10,3 +10,9 @@ Integrantes:
 - Luego volver a levantar el contenedor de node con el comando docker compose  -f "docker-compose.yaml" up -d --build node
 - Luego se tiene que entrar a la consola de cassandra con el comando cqlsh -u cassandra -p cassandra
 - Finalmente se crear los keyspaces y las tablas tal como se encuetra en el archivo a.cql
+
+# Preguntas
+
+1. Explique la arquitectura que Cassandra maneja. Cuando se crea el clúster ¿Cómo los nodos se conectan? ¿Qué
+ocurre cuando un cliente realiza una petición a uno de los nodos? ¿Qué ocurre cuando uno de los nodos se desconecta?
+¿La red generada entre los nodos siempre es eficiente? ¿Existe balanceo de carga?
