@@ -1,7 +1,7 @@
 # Tarea 3 Sistemas Distribuidos
 Integrantes:
--Joaquín Lagos
--Lucas Muñoz
+- Joaquín Lagos
+- Lucas Muñoz
 
 # Instrucciones de uso
 
