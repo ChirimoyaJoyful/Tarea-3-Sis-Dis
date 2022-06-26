@@ -16,7 +16,7 @@ services:
     image: bitnami/cassandra:3.11.13-debian-10-r14
     environment:
       - CASSANDRA_CLUSTER_NAME=cassandra-cluster
-      - CASSANDRA_SEEDS=cassandra1,cassandra2
+      - CASSANDRA_SEEDS=cassandra1,cassandra2,cassandra3
       - CASSANDRA_PASSWORD_SEEDER=yes
     networks:
       - cluster
@@ -25,7 +25,7 @@ services:
     image: bitnami/cassandra:3.11.13-debian-10-r14
     environment:
       - CASSANDRA_CLUSTER_NAME=cassandra-cluster
-      - CASSANDRA_SEEDS=cassandra1,cassandra2
+      - CASSANDRA_SEEDS=cassandra1,cassandra2,cassandra3
     networks:
       - cluster
   cassandra3:
@@ -33,7 +33,7 @@ services:
     image: bitnami/cassandra:3.11.13-debian-10-r14
     environment:
       - CASSANDRA_CLUSTER_NAME=cassandra-cluster
-      - CASSANDRA_SEEDS=cassandra1,cassandra2
+      - CASSANDRA_SEEDS=cassandra1,cassandra2,cassandra3
     networks:
       - cluster
 networks:
