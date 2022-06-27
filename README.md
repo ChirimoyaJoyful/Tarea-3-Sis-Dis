@@ -40,4 +40,5 @@ En el caso actual, asumiendo que la organización le dedica tan solo un rack al 
 cuando se quiere escalar en la solución? ¿Qué mejoras implementaría? Oriente su respuesta hacia el Sharding (la
 replicación/distribución de los datos) y comente una estrategia que podría seguir para ordenar los datos.
 
-R.
+R. Para el contexto planteado, la solución puede ser mejorada. En cuanto al modelo de la base de datos, si se utiliza el rut como primary key en la tabla paciente, en vez de tener un ID, se podría buscar por rut directamente (siguiendo la limitación de Cassandra de no poder filtrar las sentencias SELECT con columnas que no son primary key).  Si se quisiera escalar, al ser una base de datos donde se van agregando más elementos sería necesario hacer uso de sharding, ya que al llegar un momento en donde existan demasiados elementos el tiempo de respuesta empeorará, es por eso que con sharding, al separar esta información y guardarla en distintos nodos, el modelo será más distribuido y mejorará el funcionamiento de la aplicación. Se podría utilizar la estrategia de consistent hash sharding, de tal forma que a cada nodo se le asigna un rango de hash y al pasar el valor de la primary key por una función hash definida, se asigna al nodo donde esté dentro del rango.
+
