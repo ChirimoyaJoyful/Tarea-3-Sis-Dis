@@ -25,8 +25,7 @@ Integrantes:
 ocurre cuando un cliente realiza una petición a uno de los nodos? ¿Qué ocurre cuando uno de los nodos se desconecta?
 ¿La red generada entre los nodos siempre es eficiente? ¿Existe balanceo de carga?
 
-R. Cassandra funciona como un grupo de nodos, en donde ellos se encuentran conectados enforma de anillos, ademas cada keyspace tiene un factor de replicación que indica 
-en cuantos nodos de el cluster (grupo de nodos) se encuentra replicado. En el caso de que un nodo se desconecte el servicio deberia funcionar sin problema alguno, esto es debido a que los demas nodos cumplirán la función de el nodo caído, en el casonde que el nodo o nodos que se desconecten son todos los puntos de contacto entre cassandra y el servidor, en ese momento la conexion dejará de funcionar.
+R. Cassandra funciona como un grupo de nodos, en donde ellos se encuentran conectados en forma de anillos, además cada keyspace tiene un factor de replicación que indica en cuántos nodos del cluster (grupo de nodos) se encuentra replicado. En el caso de que un nodo se desconecte el servicio debería funcionar sin problema alguno, esto es debido a que los demás nodos cumplirán la función de el nodo caído, en el caso de que el nodo o nodos que se desconecten son todos los puntos de contacto entre cassandra y el servidor, en ese momento la conexión dejará de funcionar.
 
 2. Cassandra posee principalmente dos estrategias para mantener redundancia en la replicación de datos. ¿Cuáles son
 estos? ¿Cuál es la ventaja de uno sobre otro? ¿Cuál utilizaría usted para en el caso actual y por qué? Justifique
