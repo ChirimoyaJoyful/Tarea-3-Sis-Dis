@@ -25,10 +25,17 @@ Integrantes:
 ocurre cuando un cliente realiza una petición a uno de los nodos? ¿Qué ocurre cuando uno de los nodos se desconecta?
 ¿La red generada entre los nodos siempre es eficiente? ¿Existe balanceo de carga?
 
+R. Cassandra funciona como un grupo de nodos, en donde ellos se encuentran conectados enforma de anillos, ademas cada keyspace tiene un factor de replicación que indica 
+en cuantos nodos de el cluster (grupo de nodos) se encuentra replicado.
+
 2. Cassandra posee principalmente dos estrategias para mantener redundancia en la replicación de datos. ¿Cuáles son
 estos? ¿Cuál es la ventaja de uno sobre otro? ¿Cuál utilizaría usted para en el caso actual y por qué? Justifique
 apropiadamente su respuesta.
 
+R. 
+
 3. Teniendo en cuenta el contexto del problema ¿Usted cree que la solución propuesta es la correcta? ¿Qué ocurre
 cuando se quiere escalar en la solución? ¿Qué mejoras implementaría? Oriente su respuesta hacia el Sharding (la
 replicación/distribución de los datos) y comente una estrategia que podría seguir para ordenar los datos.
+
+R.
