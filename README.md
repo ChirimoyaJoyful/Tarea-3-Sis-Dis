@@ -32,7 +32,11 @@ Debido a la estructura distribuida de Cassandra se encuentra la existencia de ba
 estos? ¿Cuál es la ventaja de uno sobre otro? ¿Cuál utilizaría usted para en el caso actual y por qué? Justifique
 apropiadamente su respuesta.
 
-R. 
+R. Cassandra posee principalmente dos estrategias para mantener redundancia en la replicación de datos. ¿Cuáles son estos? ¿Cuál es la ventaja de uno sobre otro? ¿Cuál utilizaría usted para en el caso actual y por qué? Justifique apropiadamente su respuesta.
+
+La primera estrategia es “Simple strategy”, está pensada para situaciones en las cuales se cuenta con solo un cluster y está ubicado en un solo datacenter, ya que no cuenta con la capacidad de saber la topología de la red. La segunda estrategia es Network Topology Strategy, cuando se utiliza esta estrategia, se debe configurar y asignar los nodos a los diferentes racks y datacenters, ya que no tiene otra forma de conocer la topología. La ventaja de NTS, obviamente es la capacidad de adaptarse a una topología con diversos datacenters. 
+En el caso actual, asumiendo que la organización le dedica tan solo un rack al servicio, se recomienda utilizar la estrategia simple, ahorrando la configuración necesaria de racks en NTS. Cassandra podría detectar los nodos creando tan solo un clúster. La desventaja es que si el rack falla, se pierde todo, ya que todos las réplicas se encuentran en el mismo.
+
 
 3. Teniendo en cuenta el contexto del problema ¿Usted cree que la solución propuesta es la correcta? ¿Qué ocurre
 cuando se quiere escalar en la solución? ¿Qué mejoras implementaría? Oriente su respuesta hacia el Sharding (la
